@@ -68,11 +68,7 @@ font-awesome: fa fa-envelope
 
 <script src="{{ base }}/assets/js/http.js"></script>
 <script>
-  var local_ip = 'Unknown';
 
-  detectLocalIP(function(ip) {
-    local_ip = ip;
-  });
 
   // See: http://jdp.org.uk/ajax/2015/05/20/ajax-forms-without-jquery.html
   if (document.forms[0] && window.FormData) {
@@ -203,20 +199,4 @@ font-awesome: fa fa-envelope
     }
   }
 
-  function detectLocalIP(callback) {
-    window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-    // Compatibility for Firefox and Chrome
-    var pc = new RTCPeerConnection({ iceServers: [] }), noop = function () { };
-    pc.createDataChannel(''); // Create a bogus data channel
-    pc.createOffer(pc.setLocalDescription.bind(pc), noop); // Create offer and set local description
-    pc.onicecandidate = function (ice) {
-      if (ice && ice.candidate && ice.candidate.candidate) {
-        var ip = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate.candidate)[1];
-        callback(ip);
-        pc.onicecandidate = noop;
-      } else {
-        callback('Unknown');
-      }
-    };
-  }
 </script>
