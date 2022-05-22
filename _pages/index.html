@@ -86,32 +86,31 @@ font-awesome: fas fa-home
     <p class="txt-size-lead">
       Here are some of the technologies that I have used before. I include those that I’m more confident and proficient in on my resume.
     </p>
-
     <div class="table-container" style="margin-top: 30px;">
       <table class="table table-bordered">
         <tr>
-          <th>Mobile</th>
-          <td>Swift, Kotlin, Objective-C, Java</td>
+          <th>Data Analysis and Visualisation</th>
+          <td>Pandas, scikit-learn, Seaborn, matlab</td>
+        </tr>
+         <tr>
+          <th>Artificial Intelligence Applications</th>
+          <td>Keras, Tensorflow, Tensorflow.JS</td>
         </tr>
         <tr>
           <th>Front-end</th>
-          <td>HTML, CSS, JavaScript, AJAX, UI Design, UX Improvement</td>
+          <td>HTML, CSS, JavaScript, AJAX, UI Design</td>
         </tr>
         <tr>
           <th>Back-end</th>
-          <td>Node.js, Express.js, REST API</td>
+          <td>Node.js, Express.js, REST API, Flask, Django</td>
         </tr>
         <tr>
           <th>Database System</th>
-          <td>Realm, MongoDB, SQLite, MySQL</td>
+          <td>MongoDB, SQLite, MySQL</td>
         </tr>
         <tr>
           <th>Software Architecture</th>
           <td>MVC, MVVM, MVP</td>
-        </tr>
-        <tr>
-          <th>JS Framework/Library</th>
-          <td>React.js, Socket.io</td>
         </tr>
         <tr>
           <th>UI Framework</th>
@@ -119,27 +118,15 @@ font-awesome: fas fa-home
         </tr>
         <tr>
           <th>Source Control</th>
-          <td>Git, GitHub, BitBucket, Sourcetree</td>
-        </tr>
-        <tr>
-          <th>Unit Test</th>
-          <td>XCTest</td>
+          <td>Docker, GitHub, Amazon Web Services</td>
         </tr>
         <tr>
           <th>Transpiler</th>
-          <td>Sass/SCSS, PostCSS, Autoprefixer, Jekyll, Babel</td>
+          <td>Sass/SCSS, Jekyll</td>
         </tr>
         <tr>
           <th>Data Serialisation</th>
           <td>JSON, YAML, XML</td>
-        </tr>
-        <tr>
-          <th>Linting</th>
-          <td>SwiftLint, ESLint, Sass-Lint</td>
-        </tr>
-        <tr>
-          <th>Tasks Automation</th>
-          <td>Gulp.js</td>
         </tr>
         <tr>
           <th>Hosting Service</th>
@@ -147,32 +134,16 @@ font-awesome: fas fa-home
         </tr>
         <tr>
           <th>Programming</th>
-          <td>C# .NET, C, C++</td>
-        </tr>
-        <tr>
-          <th>Content Management System</th>
-          <td>Wordpress</td>
-        </tr>
-        <tr>
-          <th>Game Development</th>
-          <td>Unity</td>
-        </tr>
-        <tr>
-          <th>IDE, Text Editor</th>
-          <td>Xcode, Android Studio, IntelliJ IDEA, JetBrains IDEs, Visual Studio, VSCode, Atom, Sublime Text</td>
+          <td>python, C++, Javascript</td>
         </tr>
         <tr>
           <th>OS</th>
-          <td>macOS, Windows, Linux</td>
+          <td>Windows, Linux</td>
         </tr>
         <tr>
-          <th>Graphic Design</th>
-          <td>Affinity Designer, Adobe Photoshop, Adobe Illustrator</td>
-        </tr>
-        <tr>
-          <th>Project Management</th>
-          <td>JIRA, Trello</td>
-        </tr>
+          <th>OS</th>
+          <td>Windows, Linux</td>
+        </tr>        
         <tr>
           <th>Marketing, Research</th>
           <td>Google Analytics, Google Trends, Facebook Ads, Instagram Ads</td>
@@ -191,55 +162,6 @@ font-awesome: fas fa-home
 <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-    // // Create a smooth scroll to target
-    // var triggerButton = document.querySelector('#trigger-button');
-    // var targetDiv = document.querySelector('#trigger-target');
-    // var marginY = 0;
-    // var destination = 0;
-    // var speed = 15;
-    // var scroller = null;
-
-    // // Start scrolling once the button is clicked
-    // triggerButton.onclick = function (event) {
-    //   event.preventDefault();
-    //   startScroll();
-    // }
-
-    // // Create startScroll function
-    // function startScroll() {
-    //   destination = targetDiv.offsetTop - 60; // Subtract to give space blocked by the nav-fixed
-
-    //   scroller = setTimeout(function () {
-    //     startScroll();
-    //   }, 1);
-
-    //   marginY = marginY + speed;
-
-    //   if (marginY >= destination) {
-    //     clearTimeout(scroller);
-    //   }
-
-    //   window.scroll(0, marginY);
-    // }
-
-    // window.addEventListener('scroll', function () {
-      // marginY = this.pageYOffset;
-
-      // Handle reveal on scroll
-      // var specialty = document.querySelector('#specialty');
-      // reveal(specialty, specialty.querySelectorAll('.col-md-4'), 'float-up');
-      // var quoteMachine = document.querySelector('#quote-machine');
-      // reveal(quoteMachine, quoteMachine.querySelector('.container'), 'fade-in');
-    // });
-
-    loadCountry(function (text) {
-      document.querySelector('#greetings-country').innerHTML = text;
-      twemoji.parse(document.querySelector('#greetings-country')/*, { folder: 'svg', ext: '.svg' }*/);
-    });
-
-    loadWeekdayQuotes(function (text) {
-      document.querySelector('#greetings-weekday').innerHTML = text;
-    });
 
     loadQuotes(function (text, author) {
       document.querySelector('#quote-text').innerHTML = text;
