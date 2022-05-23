@@ -14,20 +14,14 @@ sass:
   style: expanded
 
 collections:
-  mobile:
+  AI:
     output: true
     permalink: /:collection/:path
   web:
     output: true
     permalink: /:collection/:path
-  desktop:
+  others:
     output: true
     permalink: /:collection/:path
-  graphics:
-    output: true
-    permalink: /:collection/:path
-  game:
-    output: true
-    permalink: /:collection/:path
-
+    
 include: ["_pages"]
